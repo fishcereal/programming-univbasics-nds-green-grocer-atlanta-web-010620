@@ -66,7 +66,7 @@ end
 end
 
 def apply_clearance(cart)
-  cart = consolidate_cart(cart)
+  
   i = 0 
   while i < cart.length do 
     if cart[i][:clearance]
