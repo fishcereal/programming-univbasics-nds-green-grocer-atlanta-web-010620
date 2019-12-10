@@ -96,6 +96,9 @@ def checkout(cart, coupons)
     grand_total += cart[i][:price]*cart[i][:count]
     i+=1 
   end
+  if grand_total > 100 
+    grand_total *=0.9
+  end
   return grand_total
   
   # This method should call
