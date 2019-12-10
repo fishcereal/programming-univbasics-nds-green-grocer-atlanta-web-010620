@@ -82,6 +82,8 @@ end
 def checkout(cart, coupons)
   
   cart = consolidate_cart(cart) 
+  p 'cart after consolidate_cart method in checkout method'
+  pp cart 
   # cart = apply_coupons(cart,coupons) 
   # cart = apply_clearance(cart) 
   
