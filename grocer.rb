@@ -82,21 +82,21 @@ end
 def checkout(cart, coupons)
   
   cart = consolidate_cart(cart) 
-  p 'cart after consolidate_cart method in checkout method'
-  pp cart 
-  # cart = apply_coupons(cart,coupons) 
-  # cart = apply_clearance(cart) 
+  # p 'cart after consolidate_cart method in checkout method'
+  # pp cart 
+  cart = apply_coupons(cart,coupons) 
+  cart = apply_clearance(cart) 
   
   # pp array 
   
   
-  # grand_total = 0 
-  # i = 0 
-  # while i < cart.length do 
-  #   grand_total += cart[i][:price]*cart[i][:count]
-  #   i+=1 
-  # end
-  # return grand_total
+  grand_total = 0 
+  i = 0 
+  while i < cart.length do 
+    grand_total += cart[i][:price]*cart[i][:count]
+    i+=1 
+  end
+  return grand_total
   
   # This method should call
   # * consolidate_cart
